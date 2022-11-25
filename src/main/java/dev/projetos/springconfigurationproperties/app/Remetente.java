@@ -5,8 +5,8 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.List;
 @Configuration
-@ConfigurationProperties(prefix = "remetente")
-public class Remetente {
+@ConfigurationProperties(prefix = "remetente") //usar o Config e não o @Component e o o config será com propriedades cujo prefixo tenha "remetente" no app.properties
+public class Remetente { //objeto Bean ( Remetente) agora terá as informações a serem usadas
     private String nome;
     private String email;
     private List<Long> telefones;
@@ -18,7 +18,7 @@ public class Remetente {
     public void setNome(String nome) {
         this.nome = nome;
     }
-
+// os métodos getters and setters devem ser criados neste Bean
     public String getEmail() {
         return email;
     }
